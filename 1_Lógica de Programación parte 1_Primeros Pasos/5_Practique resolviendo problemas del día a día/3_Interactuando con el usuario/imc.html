@@ -1,0 +1,29 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<h1>IMC</h1>
+<script>
+
+    const saltarLinea = () => {
+        document.write("<br>")
+        document.write("<br>")
+        document.write("<br>")
+    }
+
+    const imprimir = (mensaje) => {
+        document.write(mensaje)
+        saltarLinea()
+    }
+
+    const calcularImc = (peso, altura) => {
+        const imc = peso / (altura * altura)
+        return imc
+    }
+
+    nombre = prompt("Informe su nombre:")
+    pesoInformado = prompt(nombre + ", informe su peso:")
+    alturaInformado = prompt(nombre + ", informe su altura:")
+
+    imcCalculado = calcularImc(pesoInformado, alturaInformado)
+
+    imprimir(nombre + ", su imc calculado es: " + imcCalculado)
+
+</script>

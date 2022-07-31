@@ -1,0 +1,22 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<h1>FÚTBOL</h1>
+<script>
+
+    const saltarLinea = () => {
+        document.write("<br>")
+        document.write("<br>")
+        document.write("<br>")
+    }
+
+    const imprimir = (mensaje) => {
+        document.write(mensaje)
+        saltarLinea()
+    }
+
+    const victorias = parseInt(prompt("Informe la cantidad de victorias: "))
+    const empates = parseInt(prompt("Informe la cantidad de empates: "))
+
+    const puntosTotal = (victorias * 3) + empates
+    imprimir("El total de puntos del equipo es: " + puntosTotal)
+
+</script>

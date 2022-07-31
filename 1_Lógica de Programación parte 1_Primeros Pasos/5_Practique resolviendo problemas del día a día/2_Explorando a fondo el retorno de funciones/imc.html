@@ -1,0 +1,26 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<h1>IMC</h1>
+<script>
+
+    const saltarLinea = () => {
+        document.write("<br>")
+        document.write("<br>")
+        document.write("<br>")
+    }
+
+    const imprimir = (mensaje) => {
+        document.write(mensaje)
+        saltarLinea()
+    }
+
+    const calcularImc = (peso, altura) => {
+        const imc = peso / (altura * altura)
+        return imc
+    }
+
+    const imcChristian = calcularImc(71, 1.72)
+    const imcFelipe = calcularImc(75, 1.73)
+
+    imprimir("El promedio del imc calculado de " + nombre1 + " y " + nombre2 + " es: " + (imc1 + imc2) / 2)
+
+</script>

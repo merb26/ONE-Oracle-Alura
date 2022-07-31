@@ -1,0 +1,24 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<h1>IMC</h1>
+<script>
+
+    const saltarLinea = () => {
+        document.write("<br>")
+        document.write("<br>")
+        document.write("<br>")
+    }
+
+    const imprimir = (mensaje) => {
+        document.write(mensaje)
+        saltarLinea()
+    }
+
+    const calcularImc = (peso, altura, nombre) => {
+        const imc = peso / (altura * altura)
+        imprimir("El IMC calculado de " + nombre + " es: " + imc)
+    }
+
+    calcularImc(71, 1.72, "Christian")
+    calcularImc(75, 1.73, "Felipe")
+
+</script>
