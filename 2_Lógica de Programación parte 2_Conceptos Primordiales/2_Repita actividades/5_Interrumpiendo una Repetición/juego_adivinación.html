@@ -1,0 +1,41 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<h1>Juego de adivinación</h1>
+<script>
+
+    const saltarLinea = () => {
+        document.write("<br>")
+        document.write("<br>")
+        document.write("<hr>")
+    }
+
+    const imprimir = (mensaje) => {
+        document.write(mensaje)
+        saltarLinea()
+    }
+
+    const sortea = (numero) => {
+        return Math.round(Math.random() * numero)
+    }
+
+    let numeroPensado = sortea(10)
+    let intentos = 3
+
+    while (intentos > 0) {
+
+        let numeroLanzado = parseInt(prompt("Ingrese un número entre 0 - 10 (intentos: " + intentos + "): "))
+
+        if (numeroPensado == numeroLanzado) {
+
+            alert("Usted acertó, en el intento " + intentos)
+            break
+
+        } else {
+
+            alert("Usted erró, el número de lo pensado es: " + numeroPensado)
+
+        }
+        intentos--
+
+    }
+
+</script>

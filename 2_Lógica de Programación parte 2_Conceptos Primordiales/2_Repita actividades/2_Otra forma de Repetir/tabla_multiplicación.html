@@ -1,0 +1,35 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<h1>Tabla de multiplicación</h1>
+<script>
+
+    const saltarLinea = () => {
+        document.write("<br>")
+        document.write("<br>")
+        document.write("<br>")
+    }
+
+    const imprimir = (mensaje) => {
+        document.write(mensaje)
+        saltarLinea()
+    }
+
+    let multiplicador = 1
+
+    imprimir("WHILE")
+
+    while (multiplicador <= 10) {
+
+        imprimir(multiplicador * 5)
+        multiplicador++
+
+    }
+
+    imprimir("FOR")
+
+    for (let multiplicador = 1; multiplicador <= 10; multiplicador++) {
+
+        imprimir(multiplicador * 5)
+
+    }
+
+</script>

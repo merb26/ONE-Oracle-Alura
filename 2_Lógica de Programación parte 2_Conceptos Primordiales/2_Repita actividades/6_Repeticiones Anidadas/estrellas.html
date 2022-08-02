@@ -1,0 +1,28 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<h1>Juego de adivinación</h1>
+<script>
+
+    const saltarLinea = () => {
+        document.write("<br>")
+        document.write("<br>")
+        document.write("<hr>")
+    }
+
+    const imprimir = (mensaje) => {
+        document.write(mensaje)
+        saltarLinea()
+    }
+
+    for (let lineas = 0; lineas < 3; lineas++) {
+
+        for (let columnas = 0; columnas < 10; columnas++) {
+
+            document.write("*")
+
+        }
+
+        saltarLinea()
+
+    }
+
+</script>

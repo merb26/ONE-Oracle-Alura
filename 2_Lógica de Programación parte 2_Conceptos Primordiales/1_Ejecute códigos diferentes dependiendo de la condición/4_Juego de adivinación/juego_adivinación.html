@@ -1,0 +1,25 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<h1>Juego de adivinación</h1>
+<script>
+
+    const saltarLinea = () => {
+        document.write("<br>")
+        document.write("<br>")
+        document.write("<br>")
+    }
+
+    const imprimir = (mensaje) => {
+        document.write(mensaje)
+        saltarLinea()
+    }
+
+    let numeroPensado = Math.round(Math.random() * 10)
+    let numeroLanzado = parseInt(prompt("Ingrese un número entre 0 - 10: "))
+
+    if (numeroPensado == numeroLanzado) {
+        imprimir("Usted acertó")
+    } else {
+        imprimir("Usted erró")
+    }
+
+</script>

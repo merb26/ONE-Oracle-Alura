@@ -1,0 +1,28 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<h1>Año Mundial</h1>
+<script>
+
+    const saltarLinea = () => {
+        document.write("<br>")
+        document.write("<br>")
+        document.write("<br>")
+    }
+
+    const imprimir = (mensaje) => {
+        document.write(mensaje)
+        saltarLinea()
+    }
+
+    let anhoMundial = 1930
+    let limite = parseInt(prompt("Ingrese el año límite para calcular: "))
+
+    while (anhoMundial <= limite) {
+
+        imprimir("Hubo mundial de la FIFA en el año: " + anhoMundial)
+        anhoMundial += 4
+
+    }
+
+    imprimir("FIN")
+
+</script>
