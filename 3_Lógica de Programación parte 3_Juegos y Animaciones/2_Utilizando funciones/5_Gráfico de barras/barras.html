@@ -1,0 +1,56 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    function dibujarRectangulo(x, y, base, altura, color) {
+        var pantalla = document.querySelector("canvas");
+        var pincel = pantalla.getContext("2d");
+
+        pincel.fillStyle = color;
+        pincel.fillRect(x, y, base, altura);
+        pincel.strokeStyle = "black";
+        pincel.strokeRect(x, y, base, altura);
+    }
+
+    function escribirTexto(x, y, texto) {
+        var pantalla = document.querySelector("canvas");
+        var pincel = pantalla.getContext("2d");
+
+        pincel.font = "30px Georgia";
+        pincel.fillStyle = "black";
+        pincel.fillText(texto, x, y);
+    }
+
+    function dibujarBarra(x, y, serie, colores, texto) {
+
+        escribirTexto(x + 50, y - 10, texto)
+
+        var pantalla = document.querySelector("canvas");
+        var pincel = pantalla.getContext("2d");
+        let totalY = y
+
+        for (let item = 0; item < serie.length; item++) {
+
+            const alturaBarra = serie[item] * (300 / 100)
+
+            if (item != 0) {
+                const alturaBarraAnterior = serie[item - 1] * (300 / 100)
+                totalY += alturaBarraAnterior
+            }
+
+            dibujarRectangulo(x, totalY, 150, 300, colores[item])
+
+        }
+
+    }
+
+    var serie2009 = [6, 47, 41, 3, 3];
+    var serie2019 = [81, 9, 3, 3, 4];
+
+    var colores = ["blue", "green", "yellow", "red", "gray"];
+
+    dibujarBarra(100, 100, serie2009, colores, "2009")
+
+    dibujarBarra(400, 100, serie2019, colores, "2019")
+
+</script>
