@@ -1,0 +1,44 @@
+<canvas width="600" height="400">
+
+</canvas>
+
+<script>
+
+    const pantalla = document.querySelector("canvas")
+    const pincel = pantalla.getContext("2d")
+
+    pincel.fillStyle = "lightgrey"
+    pincel.fillRect(0, 0, 600, 400)
+
+    const disenharCircunferencia = (x, y, radio) => {
+
+        pincel.fillStyle = "blue"
+        pincel.beginPath()
+        pincel.arc(x, y, radio, 0, 2 * Math.PI)
+        pincel.fill()
+
+    }
+
+    const limpiarPantalla = () => {
+
+        pincel.clearRect(0, 0, 600, 400)
+
+    }
+
+    let x = 0
+
+    const actualizarPantalla = () => {
+
+        limpiarPantalla()
+        disenharCircunferencia(x, 20, 10)
+        x++
+
+    }
+
+    setInterval(() => {
+
+        actualizarPantalla()
+
+    }, 5);
+
+</script>
